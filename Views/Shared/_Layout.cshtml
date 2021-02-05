@@ -1,0 +1,91 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppMascota</title>
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+    <!-- Vendor CSS Files -->
+    <link href="../../wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">   
+    <link href="../../wwwroot/lib/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../wwwroot/lib/assets/vendor/bootstrap-datepicker/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <!-- estilos -->
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<body>
+    <!-- ======= Top Bar ======= -->
+  <div id="topbar" class="d-none d-lg-flex align-items-center fixed-top">
+    <div class="container d-flex">
+      <div class="contact-info mr-auto">
+        <i class="fas fa-envelope"></i> <a href="mailto:contact@example.com">contact@example.com</a>
+        <i class="fas fa-phone-alt"></i> 0387 437-3490
+        <i class="fas fa-map-marker-alt"></i> Lavalle 530, Salta
+      </div>
+      <div class="social-links">
+        <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top ">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo mr-auto"><a href="/">Hosp<span class="spanMascota">Mascotas</span><i class="fas fa-hospital-symbol"></i></a></h1>
+      
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+        
+ 
+          <li class="active" class="nav-item" >
+            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+          </li>
+          
+          
+          <li><a href="#contact">Contact</a></li>
+
+        </ul>
+      </nav><!-- .nav-menu -->
+
+      <a href="#appointment" class="appointment-btn scrollto">Iniciar Sesión</a>
+
+    </div>
+  </header><!-- End Header --> 
+  <div class="contenedor">
+    @RenderBody()
+
+  </div>
+  @* <div class="container">
+      <main role="main" class="pb-3">
+          @RenderBody()
+      </main>
+  </div> *@
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2021 - AppMascota - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
